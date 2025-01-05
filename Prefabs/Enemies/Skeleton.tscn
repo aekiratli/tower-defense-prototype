@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4pa331cnn6ws"]
+
+[ext_resource type="Script" path="res://Scripts/skeleton.gd" id="1_qdaol"]
+[ext_resource type="Texture2D" uid="uid://scsl0sf8chfy" path="res://Assets/skeleton.png" id="2_30sly"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jnaai"]
+radius = 6.0
+
+[node name="Skeleton" type="Node2D"]
+script = ExtResource("1_qdaol")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -2)
+scale = Vector2(0.0525391, 0.0632813)
+texture = ExtResource("2_30sly")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_jnaai")

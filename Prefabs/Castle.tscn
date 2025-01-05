@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://diih1mq87is34"]
+
+[ext_resource type="Texture2D" uid="uid://c6wlt3i40b8nv" path="res://Assets/castle.png" id="1_twdld"]
+[ext_resource type="Script" path="res://Scripts/castle.gd" id="2_fe62s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p2ero"]
+radius = 231.037
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_581eh"]
+radius = 437.413
+
+[node name="Castle" type="Node2D"]
+
+[node name="Castle" type="Sprite2D" parent="."]
+texture = ExtResource("1_twdld")
+script = ExtResource("2_fe62s")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Castle"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Castle/CharacterBody2D"]
+z_index = 4
+shape = SubResource("CircleShape2D_p2ero")
+debug_color = Color(0.92844, 3.40766e-05, 0.664655, 0.42)
+
+[node name="Attack Area" type="Area2D" parent="Castle"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Castle/Attack Area"]
+shape = SubResource("CircleShape2D_581eh")
