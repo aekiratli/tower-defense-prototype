@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgwpp253rrqa7"]
+
+[ext_resource type="Texture2D" uid="uid://vat8383gmmxg" path="res://Assets/crosshair.png" id="1_tydme"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Crosshair" type="Sprite2D" parent="."]
+z_index = 7
+rotation = 0.785398
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_tydme")

@@ -26,3 +26,6 @@ debug_color = Color(0.92844, 3.40766e-05, 0.664655, 0.42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Castle/Attack Area"]
 shape = SubResource("CircleShape2D_581eh")
+
+[connection signal="area_entered" from="Castle/Attack Area" to="Castle" method="_on_attack_area_area_entered"]
+[connection signal="body_entered" from="Castle/Attack Area" to="Castle" method="_on_attack_area_body_entered"]
